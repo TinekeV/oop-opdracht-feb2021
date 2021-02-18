@@ -22,7 +22,12 @@ class BusinessAccount {
             this.balance = this.balance - withdrawal;
         }
     };
-    sepaInvoice() {
+    sepaInvoice(amount) {
+        if (this.sepaPermission !== true || amount < 0) {
+            return this.balance
+        } else {
+            this.balance = this.balance + (amount * 0.99)
+        }
 
     }
 }

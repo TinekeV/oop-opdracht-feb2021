@@ -104,7 +104,7 @@ test("The daily limit for a withdrawal should be 20000, amounts over 20000 shoul
   expect(businessAccountInstance.balance).toBe(50000);
 });
 
-test.only("A BusinessAccount have the sepaInvoice method", () => {
+test("A BusinessAccount have the sepaInvoice method", () => {
   const businessAccountInstance = new BusinessAccount();
 
   expect(businessAccountInstance.sepaInvoice).toBeDefined();
