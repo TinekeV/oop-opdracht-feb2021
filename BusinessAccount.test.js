@@ -2,7 +2,7 @@ const BusinessAccount = require("./BusinessAccount.js");
 
 // Starting with only this test, take out .only once it is working
 // Add .only to the next test to do one at a time
-test.only("BusinessAccount.js should export something", () => {
+test("BusinessAccount.js should export something", () => {
   expect(BusinessAccount).not.toBeNull();
 });
 
@@ -31,7 +31,7 @@ test("A new Business Account can be created with and should store: a name, balan
   expect(businessAccountInstance.sepaPermission).toBe(true);
 });
 
-test("A Business Account instance should have a 'makeDeposit' method", () => {
+test.only("A Business Account instance should have a 'makeDeposit' method", () => {
   const businessAccountInstance = new BusinessAccount();
 
   expect(businessAccountInstance.makeDeposit).toBeDefined();

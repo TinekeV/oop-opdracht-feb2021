@@ -2,7 +2,7 @@ const Account = require("./Account.js");
 
 // Starting with only this test, take out .only once it is working
 // Add .only to the next test to do one at a time
-test.only("Account.js should export something", () => {
+test("Account.js should export something", () => {
   expect(Account).not.toBeNull();
 });
 
@@ -24,7 +24,7 @@ test("A new Account can be created with and should store: a name, balance & cred
   expect(accountInstance.creditLimit).toBe(500);
 });
 
-test("An account instance should have a 'makeDeposit' method", () => {
+test.only("An account instance should have a 'makeDeposit' method", () => {
   const accountInstance = new Account();
 
   expect(accountInstance.makeDeposit).toBeDefined();
