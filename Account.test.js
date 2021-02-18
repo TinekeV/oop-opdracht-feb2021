@@ -24,7 +24,7 @@ test("A new Account can be created with and should store: a name, balance & cred
   expect(accountInstance.creditLimit).toBe(500);
 });
 
-test.only("An account instance should have a 'makeDeposit' method", () => {
+test("An account instance should have a 'makeDeposit' method", () => {
   const accountInstance = new Account();
 
   expect(accountInstance.makeDeposit).toBeDefined();

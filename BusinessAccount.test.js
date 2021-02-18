@@ -31,7 +31,7 @@ test("A new Business Account can be created with and should store: a name, balan
   expect(businessAccountInstance.sepaPermission).toBe(true);
 });
 
-test.only("A Business Account instance should have a 'makeDeposit' method", () => {
+test("A Business Account instance should have a 'makeDeposit' method", () => {
   const businessAccountInstance = new BusinessAccount();
 
   expect(businessAccountInstance.makeDeposit).toBeDefined();
@@ -104,7 +104,7 @@ test("The daily limit for a withdrawal should be 20000, amounts over 20000 shoul
   expect(businessAccountInstance.balance).toBe(50000);
 });
 
-test("A BusinessAccount have the sepaInvoice method", () => {
+test.only("A BusinessAccount have the sepaInvoice method", () => {
   const businessAccountInstance = new BusinessAccount();
 
   expect(businessAccountInstance.sepaInvoice).toBeDefined();
